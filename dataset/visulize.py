@@ -11,9 +11,9 @@ labels = np.load(label_path)  # shape: (20,)
 # Label mapping 
 id2label = {0: 'W', 1: 'N1', 2: 'N2', 3: 'N3', 4: 'REM'}
 
-# 📊 Plot first 3 epochs 
+# 📊 Plot first 20 epochs 
 epochs_to_plot = 20
-channel_names = ['Ch1', 'Ch2', 'Ch3', 'Ch4', 'Ch5', 'Ch6']
+channel_names = ["F3-A2", "C3-A2", "O1-A2", "F4-A1", "C4-A1", "O2-A1"]
 
 for i in range(epochs_to_plot):
     fig, axs = plt.subplots(6, 1, figsize=(15, 10), sharex=True)
