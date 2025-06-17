@@ -75,7 +75,7 @@ class LoadDataset(object):
         # print(subject_nums)
         subject_dirs_seq = []
         subject_dirs_labels = []
-        for subject_num in range(1, 101):
+        for subject_num in range(1, 11):
             subject_dirs_seq.append(os.path.join(self.seqs_dir, f'ISRUC-group1-{subject_num}'))
             subject_dirs_labels.append(os.path.join(self.labels_dir, f'ISRUC-group1-{subject_num}'))
 
@@ -96,10 +96,10 @@ class LoadDataset(object):
         val_pairs = []
         test_pairs = []
 
-        for i in range(100):
-            if i < 80:
+        for i in range(10): #use 100 for normal dataset
+            if i < 7:
                 train_pairs.extend(seqs_labels_path_pair[i])
-            elif i < 90:
+            elif i < 9:
                 val_pairs.extend(seqs_labels_path_pair[i])
             else:
                 test_pairs.extend(seqs_labels_path_pair[i])
