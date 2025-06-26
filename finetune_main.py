@@ -4,7 +4,7 @@ import numpy as np
 import torch
 
 # --- Import only ISRUC dataset and model ---
-from dataset import dataLoader as isruc_dataset
+from dataset import isruc_dataset as isruc_dataset
 from finetune_trainer import Trainer
 from models import model_for_isruc
 
@@ -22,7 +22,7 @@ def main():
     parser.add_argument('--seed', type=int, default=3407, help='Random seed')
     parser.add_argument('--cuda', type=int, default=0, help='CUDA device number')
     parser.add_argument('--epochs', type=int, default=50, help='Number of epochs')
-    parser.add_argument('--batch_size', type=int, default=64, help='Training batch size')
+    parser.add_argument('--batch_size', type=int, default=4, help='Training batch size')
     parser.add_argument('--lr', type=float, default=1e-4, help='Learning rate')
     parser.add_argument('--weight_decay', type=float, default=5e-2, help='Weight decay')
     parser.add_argument('--optimizer', type=str, default='AdamW', help='Optimizer (AdamW or SGD)')
